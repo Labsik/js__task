@@ -42,14 +42,14 @@ const users = (letter) => {
     });
 };
 
-const symbols = makeSymbolds(5);
-for (i = 0; i < symbols.length; i++) {
+const sym = makeSymbolds(5);
+for (i = 0; i < sym.length; i++) {
   let opt = document.createElement('option');
-  opt.value = symbols[i];
-  opt.innerHTML = symbols[i];
+  opt.value = sym[i];
+  opt.innerHTML = sym[i];
   select.appendChild(opt);
 }
-users(symbols[0]);
+users(sym[0]);
 
 select.addEventListener('change', (e) => {
   const selected = select.options.selectedIndex;
